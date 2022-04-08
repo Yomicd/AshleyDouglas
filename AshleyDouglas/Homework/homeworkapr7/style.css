@@ -1,0 +1,68 @@
+.header{
+    background-color: yellow;
+    color:orange;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 70px;
+    font-weight: 700;
+    text-align: center;
+    
+}
+
+.ramenrecipes {
+    color:green;
+    font-weight:600;
+    text-shadow: 3em;
+   
+
+}
+
+.cart {
+    color:red;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:700;
+
+}
+
+body {
+    background-color: red;
+    color: green;
+    padding: 30px;
+    margin: 1em;
+    
+}
+
+button {
+    color:white;
+    background-color: orange;
+    border-radius: 35px;
+    cursor: pointer;
+    :hoverbackground-color: green;
+}
+
+button:hover {background-color: green;}
+
+.cartButton {
+	box-shadow: 3px 4px 0px 0px #8a2a21;
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+	background-color:#c62d1f;
+	border-radius:18px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+    margin-top: 25px;
+}
+.cartButton:hover {
+	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+	background-color:#f24437;
+}
+.cartButton:active {
+	position:relative;
+	top:1px;
+   
+}
