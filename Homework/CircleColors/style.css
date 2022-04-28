@@ -1,0 +1,60 @@
+
+
+
+
+
+.clockimg{
+    height:100%;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+
+/* grid covers entire page, no space btw cells, circular opaque shape */
+
+.parent{
+    display:grid;
+    grid-gap:0px;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 300px 300px 300px;
+   
+}
+
+
+.parent > div {
+    padding:1em;
+    background-color:goldenrod;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: goldenrod;
+    
+    
+    
+    
+}
+
+.parent > div:hover {
+    padding:1em;
+    background-color:pink;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    
+  
+    
+    
+}
+
+
+ 
+  
+
+
+/* hovering over cells should change opacity to 0*/
+
+
+
+/* modify hover so that grid cells change when you onclick window

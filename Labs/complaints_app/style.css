@@ -1,0 +1,63 @@
+* {
+    border: 1px dashed;
+}
+
+
+.complaintBar{
+    display: flex;
+    justify-content: center;
+    border-radius: 20%;
+    padding: .2rem;
+
+}
+
+.complaintBar * {
+    padding: 0.5rem;
+    margin: 0 0.125rem;
+}
+
+.complaintBar input{
+    border-radius: 4px;
+}
+
+.complaintBar button {
+    background-color: red;
+    color:white;
+font-weight: bold;
+border: none;
+border-radius: 4px;
+}
+
+.complaintBar button:hover{
+    background-color: green;
+}
+
+.complaintBarOutput{
+    display: flex;
+    flex-direction: column;
+    margin: 0 4rem;
+}
+
+.complaint{
+    display: flex;
+    flex-direction: column;
+}
+
+.complaintTitle{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.complaintTitle button {
+    cursor: pointer;
+    background-color: bisque;
+    color:red;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 0.2rem;
+}
+
+.complaintTitle button:hover {
+    background-color: goldenrod;
+}

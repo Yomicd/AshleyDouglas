@@ -1,0 +1,58 @@
+body{
+   background-color:  black;
+   color: peru;
+}
+
+.sephoraLogo h1{
+    color:white;
+    font-weight:200;
+
+}
+
+.sephoraLogo a{
+    text-decoration: none;
+}
+
+
+
+.navContainer{
+  border:solid lemonchiffon;
+  height: 110px;  
+  display:flex;
+  border-width:.2px;
+  justify-content: space-around;
+
+}
+
+.navTag{
+    border: solid peru;
+    border-width:.2px;
+    padding: 8px; height: 15px;
+}
+
+.navTag:hover{
+    border: solid peru;
+    background-color: lemonchiffon;
+    color:black;
+    border-width:.2px;
+    padding: 8px; height: 15px;
+}
+
+
+.sephoraLogo{
+    color:white;
+    border:solid peru;
+    padding:1em;
+    text-decoration: none;
+
+ 
+   
+    
+}
+
+.sephoraLogo:hover{
+    color:peru;
+    background-color: darkseagreen;
+    padding:1em;
+}
+

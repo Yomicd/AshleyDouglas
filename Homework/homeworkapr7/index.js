@@ -20,6 +20,12 @@ if ( ingredient ="extra noodles", "egg", "tofu", "fish", "pork belly"){
     console.log(ingredient++)
 };
 
+const addToCart = (food) => {
+    let buttonChange = document.querySelector (".cartButton");
+    buttonChange.innerHTML = food
+  }
+  
+
 console.log(RamenType);
 console.log(RamenType[1]);
 

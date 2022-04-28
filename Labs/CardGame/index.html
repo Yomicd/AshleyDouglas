@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+  <html class="no-js"> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Yomi's Guessing Game</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+     <h2>Yomi's Guessing Game</h2>
+
+<!--Screen for game-->
+     <div id="promptScreen">Right or Wrong</div>
+<!--Photo and score divider underneath-->
+     <div id="scoreBox">
+        <img src="">
+        <h2 id="scoreCounter">Score: 0 </h2>
+
+     </div>
+
+     <!--Card Section with hover and flip over-->
+<div id="tarotBox">
+     <img max-width="100"  src="https://i.etsystatic.com/22439944/r/il/d94c37/3342106251/il_fullxfull.3342106251_kui9.jpg" onclick="toggleCardOne()" class="card1" >
+     <img max-width="100" src="https://i.etsystatic.com/22439944/r/il/d94c37/3342106251/il_fullxfull.3342106251_kui9.jpg" onclick="toggleCardTwo()" class="card2" >
+     <img max-width="100" src="https://i.etsystatic.com/22439944/r/il/d94c37/3342106251/il_fullxfull.3342106251_kui9.jpg" onclick="toggleCardThree()" class="card3">
+</div>     
+
+     
+        
+        
+        <script src="app.js" async defer></script>
+    </body>
+</html>

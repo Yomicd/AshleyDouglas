@@ -1,0 +1,146 @@
+
+@keyframes moveUp {
+    from {
+        transform: translateY(0vh); border: solid salmon;
+    }
+    to {
+        transform: translateY(-100vh)
+        border-width 15px;
+    }
+    
+}
+
+
+@keyframes moveDown {
+    from {
+        transform: translateY(0vh); border: solid saddlebrown;
+    }
+    to {
+        transform: translateY(100vh)
+        border-width 15px;
+    }
+    
+}
+
+
+
+@keyframes moveLeft {
+    from {
+        transform: translateX(0vw); border: solid sienna
+    }
+    to {
+        transform: translateX(-100vw)
+        border-width 15px;
+    }
+    
+}
+
+
+
+
+@keyframes moveRight {
+    from {
+        transform: translateX(0vw); border: solid seagreen;
+    }
+    to {
+        transform: translateX(100vw)
+        border-width 15px;
+    }
+    
+}
+
+
+
+* {
+    border: solid;
+}
+
+body{
+   
+  
+    min-width: 1000px;
+    background-color: pink;
+}
+
+h2{
+    background-color: orange;
+    text-align: center;
+}
+
+.borderTop{
+    border: solid black;
+    margin-bottom: 1em;
+    border-width: .2px;
+}
+
+img{
+   
+    border-radius: 90%;
+    text-align: center;
+    
+
+}
+
+.controls{
+    margin-top: 5em;
+    
+    
+    
+
+}
+
+
+button{
+    border-radius: 45%;
+    justify-content: center;
+
+}
+
+
+.up, .down {
+   flex-direction: column;
+   align-items: center;
+   margin-left:50%;
+   text-align:center;
+   
+}
+
+
+.left{
+    flex-direction: column;
+    align-items: center;
+    margin-left:35%;
+    text-align:center;
+    
+    
+ }
+
+ .right {
+    flex-direction: column;
+    align-items: center;
+    margin-left:30%;
+    text-align:center;
+    
+ }
+ 
+ 
+
+.moveUp{
+    animation: moveUp 5s ease-in-out infinite;
+}
+
+.moveDown{
+    animation: moveDown 5s ease-in-out infinite;
+
+}
+
+.moveRight{
+    animation: moveRight 5s ease-in-out infinite;
+
+}
+
+.moveLeft{
+    animation: moveLeft 5s ease-in-out infinite;
+
+
+}

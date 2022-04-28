@@ -1,0 +1,51 @@
+
+body{
+    background-color: bisque;
+}
+
+h2{
+    color:goldenrod;
+    font-weight: 200;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+img{
+    max-width: 100%;
+}
+
+
+#promptScreen{
+    border-style: solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: pink;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
+    width: 200px;
+    margin-bottom: 5px;
+    border-radius: 25px;
+    text-align: center;
+    
+
+
+}
+
+#tarotBox{
+    display: inline-flex;
+    max-width: 200px;
+
+}
+
+.card1, .card2, .card3{
+    border-radius: 3em;
+    height:180px;
+    width:75%;
+}
+
+.card1:hover, .card2:hover, .card3:hover{
+    border: solid palevioletred;
+    height: 180px;
+    width: 75%;
+    background-image: url('https://i.pinimg.com/originals/67/0c/33/670c339c7a9a65a29eea80c6daff4f5d.gif');
+    box-shadow: 5px 5px 33px -2px rgb(204, 142, 184);
+}

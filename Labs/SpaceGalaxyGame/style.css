@@ -1,0 +1,125 @@
+
+@keyframes alienAttack {
+
+    0%{
+        transform: translateX(-50vw);
+    }
+
+    50%{
+        transform: translateX(-80vw);
+    }
+
+
+    100%{
+        transform: translateX(-100vw);
+    }
+
+    
+    
+}
+
+
+
+body{
+    background-color: black;
+}
+
+.gameboard {
+background-image: url('https://media3.giphy.com/media/FMsbSSjEe0N6zH7K7x/giphy-downsized-large.gif');
+background-size: cover;
+border: black solid;
+margin: 1em;
+justify-content: space-between;
+display: flex;
+margin: 1em;
+
+}
+
+.legend{
+    border: solid blue;
+    border-radius: 22px;
+    margin: 2em;
+    height: 22vh;
+    background-color: gray;
+    display: flex;
+
+    
+}
+
+
+.us{
+    
+    margin: 1em;
+    width: 30px;
+}
+
+.they{
+   
+    margin: 1em;
+    width:210px;
+    display: flex;
+    border: solid salmon;
+
+}
+
+.score{
+    border: solid purple;
+    margin:1em;
+    padding:1em;
+    color: white;
+    border-radius: 22px;
+
+}
+
+.ship{
+    height: 120px;
+    margin-top: 20vh;
+}
+
+.alienContainer{
+    justify-content: space-between;
+    height: 42vh;
+    margin: 1em;
+    color: lime;
+    padding: 1em;
+    
+
+}
+
+.alien{
+    height: 40px;
+}
+
+
+.startAlienAttack{
+    animation: alienAttack 4s ease-in infinite;
+}
+
+.healthbar{
+    border: solid yellow;
+    color: black;
+    height: 4px;
+    display: flex;
+    border-width: .2px;
+    justify-content: space-evenly;
+    border-radius:15px;
+    
+    
+}
+
+.fifty{
+    background-color: green;
+    width: 50%;
+
+}
+
+.hundred{
+    background-color: green;
+    width: 50%;
+    font-size: 8px;
+    text-align: right;
+}
+
+.blackOut{
+    background-color: black;
+}
