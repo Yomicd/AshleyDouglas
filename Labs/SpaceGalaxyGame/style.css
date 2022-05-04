@@ -1,17 +1,41 @@
+*{
+    border: dashed white;
+   
+}
+
 
 @keyframes alienAttack {
 
     0%{
-        transform: translateX(-50vw);
+        transform: translateY(-0vh);
     }
 
     50%{
-        transform: translateX(-80vw);
+        transform: translateY(15vh);
     }
 
 
     100%{
-        transform: translateX(-100vw);
+        transform: translateY(20vh);
+    }
+
+    
+    
+}
+
+@keyframes USSAAttack {
+
+    0%{
+        transform: translateX(0vw);
+    }
+
+    50%{
+        transform: translateX(-50vw);
+    }
+
+
+    100%{
+        transform: translateX(-0vw);
     }
 
     
@@ -21,16 +45,18 @@
 
 
 body{
-    background-color: black;
+    background-color:black;
 }
 
 .gameboard {
-background-image: url('https://media3.giphy.com/media/FMsbSSjEe0N6zH7K7x/giphy-downsized-large.gif');
+background-image: url('https://i.gifer.com/embedded/download/YZrn.gif');
 background-size: cover;
+height: 45vh;
+max-width: 100vw;
 border: black solid;
 margin: 1em;
+/* position: relative; */
 justify-content: space-between;
-display: flex;
 margin: 1em;
 
 }
@@ -50,17 +76,17 @@ margin: 1em;
 .us{
     
     margin: 1em;
-    width: 30px;
+   display: flex;
+   justify-content: space-between;
+   align-self: center;
+   align-items: center;
+   flex-direction:row;
+   margin-top: auto;
+
+    
 }
 
-.they{
-   
-    margin: 1em;
-    width:210px;
-    display: flex;
-    border: solid salmon;
 
-}
 
 .score{
     border: solid purple;
@@ -71,23 +97,45 @@ margin: 1em;
 
 }
 
-.ship{
-    height: 120px;
-    margin-top: 20vh;
-}
-
 .alienContainer{
-    justify-content: space-between;
-    height: 42vh;
-    margin: 1em;
+    
+    height: 4vh;
+    width:100vw;
+    align-content:space-around;
+    justify-content: center;
     color: lime;
     padding: 1em;
-    
+    flex-direction: row;
+    display:flex;
+
+}
+
+
+.alienShip1, .alienShip2, .alienShip3, .alienShip4, .alienShip5, .alienShip6{
+    height:60px;
+    text-align: center;
 
 }
 
 .alien{
-    height: 40px;
+    height: 25px;
+
+}
+
+.ship{
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    height: 80px;
+    margin-top: 20vh;
+    
+    
+}
+
+.actionbutton{
+    border-radius: .2em;
+
+
 }
 
 
@@ -95,10 +143,15 @@ margin: 1em;
     animation: alienAttack 4s ease-in infinite;
 }
 
+
+.startUSSAAttack{
+    animation: USSAAttack 4s ease-in infinite;
+}
+
 .healthbar{
     border: solid yellow;
     color: black;
-    height: 4px;
+    height: 6px;
     display: flex;
     border-width: .2px;
     justify-content: space-evenly;
@@ -122,4 +175,9 @@ margin: 1em;
 
 .blackOut{
     background-color: black;
+}
+
+
+.explosion{
+    background-image:url('https://i.gifer.com/origin/00/00ae53a95ee7af0be395f5291d792c9a.gif')
 }

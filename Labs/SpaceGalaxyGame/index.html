@@ -7,6 +7,7 @@
         <title>Space Galaxy</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+       
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -17,91 +18,103 @@
 
 <div class="gameboard">
 
-            <!--US ship animation-->
-    <div class="us">
-        <img src="https://toppng.com/uploads/preview/spaceship-png-11552939098rxdyieenxb.png" alt="" class="ship">
-    </div>
 
             <!--Alien spaceship animation-->
-    <div class="they">
+    
 
         <div class="alienContainer">
 
-
+                                                <!--Alien One-->
                 <div class="healthbar">
                     <div class="fifty"></div>
-                    <div class="hundred">100%</div>
+                    <div class="hundred"></div>
                 </div>
-            <div class="alienShip">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvsnggPIwzVpL4xEm-VFKffAUafHBBqfr5Jg&usqp=CAU" alt="" class="alien">
+
+
+            <div class="alienShip1">
+                <img src="https://bestanimations.com/media/ufos/661785383ufo-flying-saucer-animated-gif-image-11.gif" alt="" class="alien">
             </div>
 
+                                                <!--Alien Two-->
                 <div class="healthbar">
                     <div class="fifty"></div>
-                    <div class="hundred">100%</div>
+                    <div class="hundred"></div>
                 </div>
-            <div class="alienShip">
+
+
+            <div class="alienShip2">
     
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvsnggPIwzVpL4xEm-VFKffAUafHBBqfr5Jg&usqp=CAU" alt="" class="alien">
+                <img src="https://bestanimations.com/media/ufos/661785383ufo-flying-saucer-animated-gif-image-11.gif" alt="" class="alien">
             </div>
-
+                                                <!--Alien Three-->
 
                 <div class="healthbar">
                     <div class="fifty"></div>
-                    <div class="hundred">100%</div>
+                    <div class="hundred"></div>
                 </div>
-            <div class="alienShip">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvsnggPIwzVpL4xEm-VFKffAUafHBBqfr5Jg&usqp=CAU" alt="" class="alien">
+            <div class="alienShip3">
+                <img src="https://bestanimations.com/media/ufos/661785383ufo-flying-saucer-animated-gif-image-11.gif" alt="" class="alien">
             </div>
-
+                                                <!--Alien Four-->
 
                 <div class="healthbar">
                     <div class="fifty"></div>
-                    <div class="hundred">100%</div>
+                    <div class="hundred"></div>
                 </div>
-            <div class="alienShip">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvsnggPIwzVpL4xEm-VFKffAUafHBBqfr5Jg&usqp=CAU" alt="" class="alien">
+            <div class="alienShip4">
+                <img src="https://bestanimations.com/media/ufos/661785383ufo-flying-saucer-animated-gif-image-11.gif" alt="" class="alien">
             </div>
 
-
+                                                <!--Alien Five-->
                 <div class="healthbar">
                     <div class="fifty"></div>
-                    <div class="hundred">100%</div>
+                    <div class="hundred"></div>
                 </div>
-            <div class="alienShip">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvsnggPIwzVpL4xEm-VFKffAUafHBBqfr5Jg&usqp=CAU" alt="" class="alien">
+            <div class="alienShip5">
+                <img src="https://bestanimations.com/media/ufos/661785383ufo-flying-saucer-animated-gif-image-11.gif" alt="" class="alien">
             </div>
-
+                                                <!--Alien Six-->
                 <div class="healthbar">
                     <div class="fifty"></div>
-                    <div class="hundred">100%</div>
+                    <div class="hundred"></div>
                 </div>
-            <div class="alienShip">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvsnggPIwzVpL4xEm-VFKffAUafHBBqfr5Jg&usqp=CAU" alt="" class="alien">
+            <div class="alienShip6">
+                <img src="https://bestanimations.com/media/ufos/661785383ufo-flying-saucer-animated-gif-image-11.gif" alt="" class="alien">
             </div>
+
+
+
+                                                <!--US ship animation/Player One-->
+
+    <div class="us">
+    <img src="https://media4.giphy.com/media/RIBPW3hArpSNtFAJe8/giphy.gif" alt="" class="ship">
+    </div>
+
+
+        
 
            
 
     
-</div>
+
     </div>
         </div>
                 <!---where the score will be -->
 
 <div class="legend">
     
-    <p class="score"> USS ASSEMBLY :<span>0</span></p>
+    <p class="playerOnescore"> USS ASSEMBLY :<span>0</span></p>
     <hr>
-    <p class="score"> ALIEN TEAM :<span>0</span></p>
+    <p class="alienScore"> ALIEN TEAM :<span>0</span></p>
     
 </div>      
 
 <!-- <button onclick="battle()" class="attackbutton">Start Game</button> -->
+<button onclick="battle()" class="actionbutton">Start Game</button>
+<button onclick="attacktheUSSA()" class="actionbutton">Alien Attack</button>
+<button onclick="attackTheAliens()" class="actionbutton">US Attack</button>
+<button id="retreatBtn" onclick="USRetreats()" class="actionbutton">Retreat</button>
 
-<button onclick="attacktheUSSA()" class="attackbutton">Start Attack</button>
-
-
-<!--galaxy backround screen-->
 
 <!--6 alien ships tht can only attack one at time-->
 

@@ -7,113 +7,103 @@
     let playerOneScore = 100
 
     let alienScore = 100
-
-
-
-
     console.log('Battle Started')
     /// Start Game
 
     //establishRoundOne
 
-
-    let command = prompt("Ready To [A]ttack? or [R]etreat?")
-
-        if(command === "A"){
-            let target = document.querySelector('.alienShip')
-            
-            let explosion = document.createElement('img')
-            explosion.setAttribute('src', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEZuKrIFINjiAUBHX2IEiZUvgfGlkqb7j6_A&usqp=CAU')
-            
-            
-  
-            //signal Explosion
+         //signal Explosion
 
 
-            // decrease alien point Value
-
+            // decrease alien point Valu
 
             let currentScore = document.querySelector('.hundred').innerHTML="";
             currentScore.classList.toggle('blackOut')
-            currentScore.style.backgroundColor = "black;"
-
-            let halfLife = document.querySelector('.fifty').innerHTML="50%"
-
-
+        
             console.log(currentScore)
-
-
-
-
-
 
             target.replaceWith(explosion)
 
-        }else{
-            console.log("PlayerOne has retreated AND LOSES")
         }
-    
 
 
 
-
-
-
-
-}
 
     //attack()
     // if (alien.life = 0){
         //then they attack
     const attacktheUSSA = () =>{
-        let ufo = document.querySelector('.alienShip')
+        let ufo = document.querySelector('.alienShip1', '.alienShip2', '.alienShip3', '.alienShip4', '.alienShip5', '.alienShip6')
         console.log('attacked!')
 
         ufo.classList.toggle('startAlienAttack')
     }
 
 
-
-    //Player 2
-// }
-
-
-
-// let s = []
-
-
-
-
-
-
-
-
-
-//  let ussAssembly = {
-     
-//          hull: 20
-//          firepower: 5
-//          accuracy: .7
-
-//     }
-//      }
-
-//  let alienShips = {
-    
-//         hull:
-//         firepower:
-//         accuracy:
-//      }
-     
-
-
-// //----- Game rounds = each player attacks ----
-
 // ///my character attacks first
+   const attackTheAliens = () =>{
+       let playerShip = document.querySelector('.ship')
+       console.log('attacked!')
+
+       playerShip.classList.toggle('startUSSAAttack');
+
+       if (Math.random() < alienShips[0].accuracy) {
+         	console.log('You have been hit!')}
+
+       let alienTwirling = document.querySelector('.hundred');
+
+       let youAreDone = document.createElement("img");
+            youAreDone.setAttribute("src","https://thumbs.gfycat.com/UnfinishedQuickDunlin-max-1mb.gif");
+            youAreDone.style.height = 80;
+            alienTwirling.replaceWith(youAreDone);
+
+            
+
+   }
+
+   
+
+
+   const playerRetreats = () =>{
+       let playerHasRetreated = getElementbyId('retreatBtn')
+       console.log("Player Has Retreated!")
+
+   }
 
 
 
-// //if ship survives, then attack my character
+
+  class ussAssembly  {
+      constructor(){
+
+        this.ship =  ship
+        this.hull = hull
+        this.firepower = firepower
+        this.accuracy = accuracy;
+      }
+     
+         
+
+     }
+
+
+  class alienShips  {
+      constructor(){
+        this.ship = ship
+        this.hull = hull
+        this.firepower = firepower
+        this.accuracy = accuracy;
+      }
+    
+        
+
+
+    }
+
+    const alienArray =['alienShip1', 'alienShip2', 'alienShip3', 'alienShip4', 'alienShip5', 'alienShip6'
+]
+
+
 
 // /// if I survive, then attack ship again
 
