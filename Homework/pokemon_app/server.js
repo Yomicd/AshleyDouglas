@@ -17,6 +17,10 @@ app.get('/pokemon', (req, res)=>{
     res.render('Index', {pokemon:pokemonObj})
 })
 
+app.get('/pokemon/:character', (req, res) => {
+    res.render("Show", {pokemon: pokemonObj[req.params.character]});
+});
+
 app.get('/pokemon/:id', (req, res)=>{
     res.send(req.params.id);
 })
