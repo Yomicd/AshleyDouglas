@@ -1,15 +1,21 @@
 
 const appstyle = {
     border: "black solid",
-    height: "300px",
-    display: "flex"
+    height: "100vh",
+    display: "flex",  
+    margin: "auto",
+    marginLeft: "0"
+
 
 }
 const sidePanelstyle = {
     border: "black solid",
-    height: "250px",
-    width: "60px",
-    flexDirection: "row"
+    width: "30vw",
+    flexDirection: "row",
+    maxWidth:"20%",
+    marginLeft: "5px",
+    height: "40vh",
+    // marginBottom: "0"
 
 }
 const widgetflex = {
@@ -18,24 +24,59 @@ const widgetflex = {
 
 const babyBoxStyle = {
     border: "red solid",
-    height: "50px",
-    width: "50px",
+    height: "40vh",
+    width:"15vw",
     flexDirection: "column",
-    justifyContent: "center",
-    alignitems: "center"
+    justifyContent: "",
+    wordWrap:"break-word",
+    margin: "auto",
+    marginRight: "10px"
+    
+}
+const recContainer = {
+    marginLeft: "auto",
+    marginRight: "5px"
 }
 const rectangleStyle = {
     border: "yellow solid"  ,
-    width: "150px",
-    height: "35px",
+    width: "70vw",
+    display: "flex",
     flexDirection: "column",
-    alignitems: "flex-end",
-    position: "absolute",
-    bottom:"0px"
+    margin: "0",
+    marginTop:"5px",
+    alignItems: "center"
+    
 }
 const greyinnerbox = {
     border: "grey solid",
-    backgroundColor: "grey"
+    backgroundColor: "grey",
+    margin: "0",
+    padding: "1rem",
+    marginBottom: "25px"
+
+    
+}
+
+const Wrapperstyle = {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+    padding:" 0",
+    flexFLow: "row wrap",
+    margin: "auto"
+
+
+
+}
+
+class Wrapper extends React.Component {
+    render(){
+        return(
+            <div style={Wrapperstyle} >
+                {this.props.children}
+            </div>
+        )
+    }
 }
 
 
@@ -89,8 +130,10 @@ class BoxWidget extends React.Component {
 class RectangleBox extends React.Component {
     render (){
         return(
-            <div>
-               <h1 style ={rectangleStyle}>
+
+            <div style={recContainer}>
+            <div style ={rectangleStyle}>
+               <h1>
                    Bottom box-add style
                </h1>
                <h5>Website Visitors</h5>
@@ -99,6 +142,8 @@ class RectangleBox extends React.Component {
 
 
             </div>
+            </div>
+            
         )
     }
 }
@@ -111,16 +156,14 @@ class RectangleBox extends React.Component {
     render(){
         return(
             <div style={appstyle}>
-                {/* <SidePanel />
-                <BoxWidget />
-                <RectangleBox /> */}
+                <Wrapper>
                 <SidePanel> 
                 </SidePanel>
                     <BoxWidget />
-                    
+                 
 
                 <RectangleBox /> 
-                
+                 </Wrapper>  
                
              </div>
         )
