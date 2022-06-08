@@ -1,4 +1,23 @@
-console.table(data)
+//create class component
+class ProductList extends React.Component {
+    render(){
+        //Render the productlist
+        //the data array that we map
+        const productList = this.props.data.map((element)=>{
+            return (
+                <li>
+                    {element.name} {element.price}
+                </li>
+
+            );
+        });
+        return(
+            <ul>
+                {productList}
+            </ul>
+        )
+    }
+}
 
 // Create calss componnt to render data to the screen
 class App extends React.Component{
@@ -111,7 +130,10 @@ handleToggleHiring = () =>{
                 </div>
             
                
-                {dataList}
+                {/* {dataList} */}
+                {/* Passing props from app component to product
+                list component */}
+                <ProductList data={data} />
             </div>
         );
     };
