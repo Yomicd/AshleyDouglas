@@ -26,26 +26,40 @@
 //   }
 // }
 
-//create shopping list component to recieve the datat from the cart
-class ShoppingList extends React.Component{
-    render(){
-        const cartItems = this.props.cart.map((element)=>{
-            return(
-                <li>
-                    {element.name} {element.price}
-                </li>
-            )
-        })
-    
-        return(
-            <ul>
-                {cartItems}
-            </ul>
-        )
+// CREATE A TOTAL COMPONENT TO SUM UP ITEMS INSIDE SHOPPING CART
+class Total extends React.Component {
+    render() {
+      const total = this.props.cart.reduce((accumulator, element) => {
+        return (accumulator += element.price);
+      }, 0);
+      return (
+        <div>
+          <h5>Total: {Math.round(total * 100 / 10 )}</h5>
+        </div>
+      );
     }
-}
-
-class ProductList extends React.Component {
+  }
+  
+  // CREATE THE SHOPPING LIST COMPONENT TO RECEIVE THE DATA FROM THE CART
+  class ShoppingList extends React.Component {
+    render() {
+      const cartItems = this.props.cart.map((element) => {
+        return (
+          <li>
+            {element.name} {element.price}
+          </li>
+        );
+      });
+      return (
+        <div>
+          <ul>{cartItems}</ul>
+          {this.props.children}
+        </div>
+      ); //
+    }
+  }
+  
+  class ProductList extends React.Component {
     state = {
       inShoppingCart: false,
     };
@@ -63,7 +77,7 @@ class ProductList extends React.Component {
             return this.props.handleShoppingCart(this.props.element);
           }}
         >
-          {this.props.element.name}{" "}
+          {this.props.element.name} {this.props.element.price}
           {this.state.inShoppingCart ? <span>in Shopping Cart</span> : null}
         </li>
       );
@@ -102,7 +116,7 @@ class ProductList extends React.Component {
   
       // Add the new item to our data array
       this.setState({
-        data: [newItem, ...this.state.data],
+        data: [newItem, this.state.data],
       });
     };
   
@@ -116,12 +130,11 @@ class ProductList extends React.Component {
     /// Step 1. Create a method in App component that keeps a handle inside Product list component
     handleShoppingCart = (item) => {
       this.setState({
-          cart: [item, ... this.state.cart],
-      })
+        cart: [item, ...this.state.cart],
+      });
     };
   
     render() {
-      console.log(this.state.cart);
       const dataList = this.state.data.map((element) => {
         return (
           //
@@ -187,9 +200,11 @@ class ProductList extends React.Component {
           {dataList}
           <div className="cart">
             <h3> Shopping Cart </h3>
+            <ShoppingList cart={this.state.cart}>
+              <Total cart={this.state.cart} />
+            </ShoppingList>
             <ul></ul>
           </div>
-          <ShoppingList cart={this.state.cart} />
         </div>
       );
     }
