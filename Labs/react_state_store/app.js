@@ -1,30 +1,3 @@
-// CREATE CLASS COMPONENT
-// class ProductList extends React.Component {
-//   state = {
-//     inShoppingCart: false,
-//   };
-
-//   // Create a function to toggle the state of our shopping cart
-//   handleCartToggle = (e) => {
-//     // this.setState({
-//     //   inShoppingCart: !this.state.inShoppingCart,
-//     // });
-//     console.log(e.target);
-//   };
-
-//   render() {
-//     // Render the product list
-// const productList = this.props.data.map((element) => {
-//   return (
-//     <li onClick={this.handleCartToggle}>
-//       {element.name} {element.price}{" "}
-//       {this.state.inShoppingCart ? <span>in shopping cart</span> : ""}
-//     </li>
-//   );
-// });
-// return <ul>{productList}</ul>;
-//   }
-// }
 
 // CREATE A TOTAL COMPONENT TO SUM UP ITEMS INSIDE SHOPPING CART
 class Total extends React.Component {
